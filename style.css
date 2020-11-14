@@ -9,4 +9,38 @@
     width: 100vw;
     height: 100vh;
 }
+
+.schedule-container {
+    background-color: #ffffff;
+    padding: 5px;
+    width: 100vw;
+    height: 225px;
+
+    display: flex;
+    align-items: center;
+
+}
+
+.time-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-top: 20px;
+    width: 30vw;
+    height: 162px;
+}
+
+.arrow-container {
+    display: flex;
+
+    width: 30vw
+}
+
+.adress-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 @media screen and (max-width: 721px)
