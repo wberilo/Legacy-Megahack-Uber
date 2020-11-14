@@ -10,6 +10,11 @@
     height: 100vh;
 }
 
+.calendar-container {
+    width: 100vw;
+    height: 225px;
+}
+
 .schedule-container {
     background-color: #ffffff;
     padding: 5px;
