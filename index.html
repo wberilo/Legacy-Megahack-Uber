@@ -21,24 +21,24 @@
   <div class="container">
     <div class="map-container" id="mapid"></div>
 
-    <div class="schedule-container">
-      <form id="schedule-form" class="schedule-form">
-
+    <form class="schedule-container">
+      <div class="calendar-wrapper"></div>
+      <div id="schedule-form" class="schedule-form">
         <div class="time-container">
           <div class="time-wrapper">
             <span class="start-point-square"></span>
 
             <!-- POSSIBILIDADE DE INPUTS -->
-              
-<!--              <input type="date" name="start-point-date" id="start-point-date"> -->
-<!--              <div class="input-time"> -->
-<!--                <select class="input-hour"> -->
-<!--                  <option>CRIAR OS OPTIONS POR JS</option> -->
-<!--                </select> -->
-<!--                <select class="input-minute"> -->
-<!--                  <option>CRIAR OS OPTIONS POR JS</option> -->
-<!--                </select> -->
-<!--              <div> -->
+
+            <!--              <input type="date" name="start-point-date" id="start-point-date"> -->
+            <!--              <div class="input-time"> -->
+            <!--                <select class="input-hour"> -->
+            <!--                  <option>CRIAR OS OPTIONS POR JS</option> -->
+            <!--                </select> -->
+            <!--                <select class="input-minute"> -->
+            <!--                  <option>CRIAR OS OPTIONS POR JS</option> -->
+            <!--                </select> -->
+            <!--              <div> -->
 
             <!-- <input type="date" name="start-point-date" id="start-point-date"> -->
             <input class="input-time" id="start-point-time" type="time" />
@@ -82,12 +82,12 @@
             <input class="input-address" type="text" name="end-point-address" id="end-point-address">
           </div>
         </div>
-      </form>
+      </div>
 
-      <button type="submit" form="schedule-form" class="submit-button">Agendar horários</button>
-    </div>
+      <button type="submit" class="submit-button">Agendar horários</button>
+    </form>
   </div>
-  
+
   <script src="./script.js"></script>
   <script src="./mapScript.js"></script>
 </body>

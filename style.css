@@ -21,7 +21,8 @@
   background-color: #000000;
   padding: 5px;
   width: 100vw;
-  height: 30vh;
+  height: 40vh;
+  margin-top: 10px;
 
   display: flex;
   flex-direction: column;
@@ -35,7 +36,7 @@
     
   margin-left: 6px;
   width: 33vw;
-  height: 18vh;
+  height: 100%;
 }
 
 .time-wrapper {
@@ -60,7 +61,8 @@
   display: flex;
   justify-content: center;
 
-  margin: 75px 5px 0 5px;
+  margin: 40px 5px 0 20px;
+  height: 100%;
   width: 33vw;
 }
 
@@ -87,7 +89,7 @@
 
   margin-right: 5px;
   height: 18vh;
-  width: 36vw;
+  height: 100%;
 }
 
 .address-container input {
@@ -102,7 +104,7 @@
   background-color: rgb(250, 176, 176);
   width: 10px;
   height: 10px;
-  margin-right: 5px;
+  margin-right: 3px;
 
   border-radius:  50%;
 }
@@ -113,13 +115,13 @@
   background-color:rgb(192, 192, 250);
   width: 10px;
   height: 10px;
-  margin-right: 5px;
+  margin-right: 3px;
 
   border-radius:  50%;
 }
 
 .input-address {
-  margin-left: -15px;
+  /* margin-left: -15px; */
   height: 10px;
 }
 
@@ -128,9 +130,9 @@
   background-color: #000000;
   padding: 5px;
   width: 100vw;
-  height: 225px;
+  height: 120px;
 
-  display: flex;
+  display: none;
   align-items: flex-start;
 }
 
@@ -149,7 +151,7 @@
 }
 
 #mapid {
-  height: 70vh;
+  height: 60vh;
 }
 
 @media screen and (min-width: 721px) {
