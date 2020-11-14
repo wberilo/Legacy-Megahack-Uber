@@ -1,30 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Uber | Agende Corridas</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
   <div class="container">
+    <div class="map-container" id="mapid"></div>
     <div class="schedule-container">
       <div class="time-container">
-        
+        <div class="time-wrapper">
+          <span class="start-point-square"></span><input id="start-point" type="time" />
+        </div>
+        <div class="time-wrapper">
+          <span class="end-point-square"></span><input id="end-point" type="time" />
+        </div>
       </div>
       <div class="arrow-container">
-
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-up" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+        </svg>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+        </svg>
       </div>
       <div class="adress-container">
-        <label for="starting-point">Ponto de partida:</label>
-        <input type="text" name="starting-point" id="starting-point">
-
-        <label for="ending-point">Ponto final:</label>
-        <input type="text" name="ending-point" id="ending-point">
+        <div class="stat-adress-wrapper">
+          <label for="starting-point"><span class="start-point-square"></span>Ponto inicial</label>
+          <input type="text" name="starting-point" id="starting-point">
+        </div>
+        <div class="end-adress-wrapper">
+          <label for="ending-point"><span class="end-point-square"></span>Ponto final</label>
+          <input type="text" name="ending-point" id="ending-point">
+        </div>
       </div>
     </div>
   </div>
-  
+
   <script src="./script.js"></script>
+  <script src="./mapScript.js"></script>
 </body>
+
 </html>
