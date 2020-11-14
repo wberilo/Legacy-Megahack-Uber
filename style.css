@@ -183,4 +183,8 @@ body {
   .schedule-form {
     width: 721px;
   }
+  
+  .add-new-schedule {
+    cursor: pointer;
+  }
 }
