@@ -175,6 +175,26 @@ body {
   margin-top: 10px;
 }
 
+.remove-schedule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px dashed white;
+  border-radius: 15px;
+
+  color: white;
+  width: 20%;
+  min-width: 150px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.buttons-management-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
 #mapid {
   height: 60vh;
 }

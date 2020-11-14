@@ -23,7 +23,7 @@
 
     <form id="schedule-form">
       <div id="schedule-container" class="schedule-container">
-        <div id="calendar-wrapper" class="calendar-wrapper">
+        <div class="calendar-wrapper">
           <input type="date" />
         </div>
         <div class="schedule-form">
@@ -31,12 +31,12 @@
             <div class="time-wrapper">
               <span class="start-point-square"></span>
 
-              <input class="input-time" id="start-point-time" type="time" />
+              <input class="input-time" type="time" />
             </div>
 
             <div class="time-wrapper">
               <span class="end-point-square"></span>
-              <input class="input-time" id="end-point-time" type="time" />
+              <input class="input-time" type="time" />
             </div>
           </div>
           <div class="arrow-container">
@@ -59,7 +59,7 @@
                 <span class="start-point-square"></span>
                 Ponto inicial
               </label>
-              <input class="input-address" type="text" name="start-point-address" id="start-point-address">
+              <input class="input-address" type="text" name="start-point-address">
             </div>
 
             <div class="end-address-wrapper">
@@ -67,13 +67,16 @@
                 <span class="end-point-square"></span>
                 Ponto final
               </label>
-              <input class="input-address" type="text" name="end-point-address" id="end-point-address">
+              <input class="input-address" type="text" name="end-point-address">
             </div>
           </div>
         </div>
       </div>
-      <div id="add-new-schedule" class="add-new-schedule"><svg width="2em" height="2em" viewBox="0 0 16 16"
-          class="bi bi-calendar2-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    </form>
+    <div class="buttons-management-wrapper">
+      <div id="add-new-schedule" class="add-new-schedule">
+        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-calendar2-plus" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd"
             d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
           <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z" />
@@ -81,9 +84,18 @@
             d="M8 8a.5.5 0 0 1 .5.5V10H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V11H6a.5.5 0 0 1 0-1h1.5V8.5A.5.5 0 0 1 8 8z" />
         </svg>
       </div>
-    </form>
+      <div id="remove-schedule" class="remove-schedule">
+        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-calendar2-x" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
+          <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z" />
+          <path fill-rule="evenodd"
+            d="M6.146 8.146a.5.5 0 0 1 .708 0L8 9.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 10l1.147 1.146a.5.5 0 0 1-.708.708L8 10.707l-1.146 1.147a.5.5 0 0 1-.708-.708L7.293 10 6.146 8.854a.5.5 0 0 1 0-.708z" />
+        </svg>
+      </div>
+    </div>
     <button form="schedule-form" type="submit" class="submit-button">Agendar horários</button>
-
   </div>
 
   <script src="./script.js"></script>
