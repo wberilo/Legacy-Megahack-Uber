@@ -1,147 +1,159 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    font-size: 15px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 15px;
 }
 
 .container {
-    background-color: #000000;
-    width: 100vw;
-    height: 100vh;
+  background-color: #000000;
+  width: 100vw;
+  height: 100vh;
 }
 
 .calendar-container {
-    width: 100vw;
-    height: 240px;
+  width: 100vw;
+  height: 240px;
 }
 
 .schedule-container {
-    background-color: #000000;
-    padding: 5px;
-    width: 100vw;
-    height: 30vh;
+  background-color: #000000;
+  padding: 5px;
+  width: 100vw;
+  height: 30vh;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .time-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
     
-    margin-left: 6px;
-    width: 33vw;
-    height: 18vh;
+  margin-left: 6px;
+  width: 33vw;
+  height: 18vh;
 }
 
 .time-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin-top: 3px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3px;
 }
 
 .time-container input {
-    margin-top: 3px;
-    height: 3.5vh;
+  margin-top: 3px;
+  height: 3.5vh;
 
-    border-radius: 8px;
+  border-radius: 8px;
+}
+
+.input-time {
+  margin-left: 15px;
+  height: 50px;
 }
 
 .arrow-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    margin: 75px 5px 0 5px;
-    width: 33vw;
+  margin: 75px 5px 0 5px;
+  width: 33vw;
 }
 
-
 .arrow-container svg:nth-child(1) {
-    color: rgb(118, 118, 255);
-    font-size: 2rem;
-    font-weight: 200;
+  color: rgb(118, 118, 255);
+  font-size: 2rem;
+  font-weight: 200;
+
+  margin-left: -15px;
 }
 
 .arrow-container svg:nth-child(2) {
-    color: rgb(255, 94, 94);
-    font-size: 2rem;
-    font-weight: 200;
+  color: rgb(255, 94, 94);
+  font-size: 2rem;
+  font-weight: 200;
+
+  margin-left: -15px;
 }
 
-.adress-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.address-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    margin-right: 5px;
-    height: 18vh;
-    width: 36vw;
-
+  margin-right: 5px;
+  height: 18vh;
+  width: 36vw;
 }
 
-.adress-container input {
-    width: 100%;
-    height: 30px;
-    border-radius: 8px;
+.address-container input {
+  width: 100%;
+  height: 30px;
+  border-radius: 8px;
 }
 
 .end-point-square {
-    display: inline-block;
+  display: inline-block;
 
-    background-color: rgb(250, 176, 176);
-    width: 10px;
-    height: 10px;
-    margin-right: 5px;
+  background-color: rgb(250, 176, 176);
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
 
-    border-radius:  50%;
-
+  border-radius:  50%;
 }
 
 .start-point-square {
-    display: inline-block;
+  display: inline-block;
 
-    background-color:rgb(192, 192, 250);
-    width: 10px;
-    height: 10px;
-    margin-right: 5px;
+  background-color:rgb(192, 192, 250);
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
 
-    border-radius:  50%;
+  border-radius:  50%;
+}
+
+.input-address {
+  margin-left: -15px;
+  height: 10px;
 }
 
 .schedule-form {
-    color: white;
-    background-color: #000000;
-    padding: 5px;
-    width: 100vw;
-    height: 225px;
+  color: white;
+  background-color: #000000;
+  padding: 5px;
+  width: 100vw;
+  height: 225px;
 
-    display: flex;
-    align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 }
 
 .submit-button {
-    color: white;
-    border: 1px solid #6c757d;
-    background-color: #788188;
-    border-radius: 5px;
-    height: 40px;
-    max-width: 180px;
-    margin: 20px 0;
-    padding: 5px;
+  color: white;
+  border: 1px solid #6c757d;
+  background-color: #788188;
+  border-radius: 5px;
+  height: 40px;
+  max-width: 180px;
+  padding: 5px;
+  margin-left: -10px;
+
+  position: fixed;
+  bottom: 10px;
 }
 
 #mapid {
-    height: 70vh;
+  height: 70vh;
 }
 
 @media screen and (min-width: 721px) {
-    .schedule-form {
+  .schedule-form {
     width: 721px;
   }
 }
