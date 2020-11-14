@@ -16,9 +16,10 @@ addNewSchedule.addEventListener('click', () => {
 
 const removeSchedule = document.getElementById('remove-schedule');
 removeSchedule.addEventListener('click', () => {
-    counter--;
-
-    const removeSchedule = document.getElementById(`schedule-container${counter}`);
-    document.getElementById('schedule-form').removeChild(removeSchedule);
+    if (counter !== 1 ) {
+        counter--;
+        const removeSchedule = document.getElementById(`schedule-container${counter}`);
+        document.getElementById('schedule-form').removeChild(removeSchedule);
+    }
 
 })
