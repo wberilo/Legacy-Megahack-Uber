@@ -130,16 +130,17 @@
     background-color: #788188;
     border-radius: 5px;
     height: 40px;
-    width: 40vw;
+    max-width: 180px;
     margin: 20px 0;
+    padding: 5px;
 }
 
 #mapid {
     height: 70vh;
 }
 
-@media screen and (max-width: 721px) {
-  body {
-    background-color: rgb(255, 94, 94);
+@media screen and (min-width: 721px) {
+    .schedule-form {
+    width: 721px;
   }
 }
