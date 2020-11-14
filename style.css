@@ -6,10 +6,16 @@
   font-size: 15px;
 }
 
-.container {
+body {
   background-color: #000000;
+
+}
+
+.container {
   width: 100vw;
-  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .calendar-container {
@@ -21,10 +27,11 @@
   background-color: #000000;
   padding: 5px;
   width: 100vw;
-  height: 40vh;
+  height: auto;
   margin-top: 10px;
 
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   align-items: center;
 }
@@ -33,9 +40,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-grow: 3;
+  flex-shrink: 1;
     
   margin-left: 6px;
-  width: 33vw;
   height: 100%;
 }
 
@@ -60,10 +68,11 @@
 .arrow-container {
   display: flex;
   justify-content: center;
+  flex-grow: 1;
+  flex-shrink: 2;
 
   margin: 40px 5px 0 20px;
   height: 100%;
-  width: 33vw;
 }
 
 .arrow-container svg:nth-child(1) {
@@ -86,9 +95,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-grow: 1;
+  flex-shrink: 5;
 
   margin-right: 5px;
-  height: 18vh;
   height: 100%;
 }
 
@@ -131,6 +141,7 @@
   padding: 5px;
   width: 100vw;
   height: 120px;
+  margin-top: 15px;
 
   display: flex;
   align-items: flex-start;
@@ -144,10 +155,23 @@
   height: 40px;
   max-width: 180px;
   padding: 5px;
-  margin-left: -10px;
+  margin-top: 20px;
 
-  position: fixed;
-  bottom: 10px;
+  align-self: center;
+}
+
+.add-new-schedule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px dashed white;
+  border-radius: 15px;
+
+  color: white;
+  width: 20%;
+  height: 50px;
+  margin-top: 10px;
 }
 
 #mapid {
