@@ -18,7 +18,8 @@
 }
 
 .schedule-container {
-    background-color: #f5f5f5;
+    color: white;
+    background-color: #000000;
     padding: 5px;
     width: 100vw;
     height: 225px;
@@ -42,11 +43,14 @@
 .time-wrapper {
     display: flex;
     flex-direction: column;
+    margin-top: 3px;
 }
 
 .time-container input {
     margin-top: 3px;
-    height: 3.3vh;
+    height: 3.5vh;
+
+    border-radius: 5px;
 }
 
 .arrow-container {
@@ -56,6 +60,7 @@
     margin: 0 5px;
     width: 33vw;
 }
+
 
 .arrow-container svg:nth-child(1) {
     color: rgb(118, 118, 255);
@@ -88,19 +93,24 @@
 .end-point-square {
     display: inline-block;
 
-    background-color: rgb(255, 94, 94);
+    background-color: rgb(250, 176, 176);
     width: 10px;
     height: 10px;
     margin-right: 5px;
+
+    border-radius:  50%;
+
 }
 
 .start-point-square {
     display: inline-block;
 
-    background-color:rgb(118, 118, 255);
+    background-color:rgb(192, 192, 250);
     width: 10px;
     height: 10px;
     margin-right: 5px;
+
+    border-radius:  50%;
 }
 
 #mapid {
