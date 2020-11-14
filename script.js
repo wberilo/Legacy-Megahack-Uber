@@ -1,4 +1,3 @@
-
 const createDiv = (className) => {
     const div = document.createElement('div');
     div.className = className;
