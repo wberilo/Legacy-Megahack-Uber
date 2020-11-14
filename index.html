@@ -13,6 +13,7 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
+    <script src="./calendar.js"></script>
 
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -22,7 +23,9 @@
     <div class="map-container" id="mapid"></div>
 
     <form class="schedule-container">
-      <div class="calendar-wrapper"></div>
+      <div id="calendar-wrapper" class="calendar-wrapper">
+        <input type="date" />
+      </div>
       <div id="schedule-form" class="schedule-form">
         <div class="time-container">
           <div class="time-wrapper">
