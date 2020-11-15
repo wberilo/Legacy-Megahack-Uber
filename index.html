@@ -1,16 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Uber | Agende Corridas</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
   <div class="container">
-    
+    <div class="map-container" id="mapid"></div>
+
+    <form id="schedule-form">
+      <div id="schedule-container" class="schedule-container">
+        <div class="calendar-wrapper">
+          <input type="date" />
+        </div>
+        <div class="schedule-form">
+          <div class="time-container">
+            <div class="time-wrapper">
+              <span class="start-point-square"></span>
+
+              <input class="input-time" type="time" />
+            </div>
+
+            <div class="time-wrapper">
+              <span class="end-point-square"></span>
+              <input class="input-time" type="time" />
+            </div>
+          </div>
+          <div class="arrow-container">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-up" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+            </svg>
+
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+            </svg>
+          </div>
+
+          <div class="address-container">
+            <div class="start-address-wrapper">
+              <label for="start-point-address">
+                <span class="start-point-square"></span>
+                Ponto inicial
+              </label>
+              <input class="input-address" type="text" name="start-point-address">
+            </div>
+
+            <div class="end-address-wrapper">
+              <label for="end-point-address">
+                <span class="end-point-square"></span>
+                Ponto final
+              </label>
+              <input class="input-address" type="text" name="end-point-address">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="buttons-management-wrapper">
+      <div id="add-new-schedule" class="add-new-schedule">
+        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-calendar2-plus" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
+          <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z" />
+          <path fill-rule="evenodd"
+            d="M8 8a.5.5 0 0 1 .5.5V10H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V11H6a.5.5 0 0 1 0-1h1.5V8.5A.5.5 0 0 1 8 8z" />
+        </svg>
+      </div>
+      <div id="remove-schedule" class="remove-schedule">
+        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-calendar2-x" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
+          <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z" />
+          <path fill-rule="evenodd"
+            d="M6.146 8.146a.5.5 0 0 1 .708 0L8 9.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 10l1.147 1.146a.5.5 0 0 1-.708.708L8 10.707l-1.146 1.147a.5.5 0 0 1-.708-.708L7.293 10 6.146 8.854a.5.5 0 0 1 0-.708z" />
+        </svg>
+      </div>
+    </div>
+    <button form="schedule-form" type="submit" class="submit-button">Agendar horários</button>
   </div>
-  
+
   <script src="./script.js"></script>
+  <script src="./mapScript.js"></script>
 </body>
+
 </html>
