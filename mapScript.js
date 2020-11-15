@@ -25,7 +25,9 @@ const fillInput = (inputClass, content) => {
   let inputToChange = input[counter];
   while (inputToChange.value.length !== 0) {
      counter++
-     inputToChange = input[counter];
+     if (input[counter]) {
+       inputToChange = input[counter];
+      }
    }
 
   inputToChange.value = content;
