@@ -16,11 +16,17 @@ body {
 
   display: flex;
   flex-direction: column;
+  
 }
 
 .calendar-container {
   width: 100vw;
   height: 240px;
+}
+
+.calendar-wrapper input {
+  padding: 8px;
+  font-size: 1.1em;
 }
 
 .schedule-container {
@@ -106,6 +112,7 @@ body {
   width: 100%;
   height: 30px;
   border-radius: 8px;
+  padding-left: 7px;
 }
 
 .end-point-square {
@@ -193,6 +200,10 @@ body {
 .buttons-management-wrapper {
   display: flex;
   justify-content: space-around;
+
+  width: 50%;
+  min-width: 315px;
+  align-self: center;
 }
 
 #mapid {
