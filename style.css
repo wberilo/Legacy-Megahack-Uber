@@ -3,20 +3,26 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 body {
   background-color: #000000;
+}
 
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width: 95vw;
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
-  
 }
 
 .calendar-container {
@@ -30,16 +36,17 @@ body {
 }
 
 .schedule-container {
-  background-color: #000000;
+  border: 1px solid white;
+  border-radius: 10px;
   padding: 5px;
-  width: 100vw;
-  height: auto;
+  width: 95%;
   margin-top: 10px;
+  padding: 5px;
 
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
   align-items: center;
+  align-self: center;
 }
 
 .time-container {
@@ -48,9 +55,11 @@ body {
   justify-content: space-between;
   flex-grow: 3;
   flex-shrink: 1;
-    
+
   margin-left: 6px;
   height: 100%;
+  width: 30%;
+  max-width: 250px;
 }
 
 .time-wrapper {
@@ -61,24 +70,22 @@ body {
 
 .time-container input {
   margin-top: 3px;
-  height: 3.5vh;
+  height: 30px;
+  max-width: 253px;
 
   border-radius: 8px;
-}
-
-.input-time {
   margin-left: 15px;
-  height: 50px;
 }
 
 .arrow-container {
   display: flex;
   justify-content: center;
   flex-grow: 1;
-  flex-shrink: 2;
+  flex-shrink: 1;
 
   margin: 40px 5px 0 20px;
   height: 100%;
+  width: 13%;
 }
 
 .arrow-container svg:nth-child(1) {
@@ -102,14 +109,16 @@ body {
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
-  flex-shrink: 5;
+  flex-shrink: 1;
 
   margin-right: 5px;
   height: 100%;
+  width: 30%;
 }
 
 .address-container input {
   width: 100%;
+  max-width: 396px;
   height: 30px;
   border-radius: 8px;
   padding-left: 7px;
@@ -123,22 +132,21 @@ body {
   height: 10px;
   margin-right: 3px;
 
-  border-radius:  50%;
+  border-radius: 50%;
 }
 
 .start-point-square {
   display: inline-block;
 
-  background-color:rgb(192, 192, 250);
+  background-color: rgb(192, 192, 250);
   width: 10px;
   height: 10px;
   margin-right: 3px;
 
-  border-radius:  50%;
+  border-radius: 50%;
 }
 
 .input-address {
-  /* margin-left: -15px; */
   height: 10px;
 }
 
@@ -146,12 +154,11 @@ body {
   color: white;
   background-color: #000000;
   padding: 5px;
-  width: 100vw;
-  height: 120px;
+  width: 95%;
   margin-top: 15px;
 
   display: flex;
-  align-items: flex-start;
+  justify-content: center;
 }
 
 .submit-button {
@@ -210,12 +217,90 @@ body {
   height: 60vh;
 }
 
-@media screen and (min-width: 721px) {
-  .schedule-form {
-    width: 721px;
+.aside-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* width: 85vw; */
+}
+
+.aside-bar h1 {
+  display: none;
+}
+
+footer {
+  display: none;
+}
+
+@media screen and (min-width: 850px) {
+  .container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    border-bottom: 3px solid white;
+
+    height: 100%;
   }
+
+  form {
+    width: 95%;
+  }
+
+  #mapid {
+    height: 80vh;
+    width: 80vw;
+    align-self: flex-start;
+  }
+  .schedule-container {
+    max-width: 997px;
+  }
+
+  .aside-bar {
+    max-height: 80vh;
+
+    overflow-y: scroll;
+  }
+
+  .aside-bar h1 {
+    display: block;
+    font-size: 4.5em;
+    color: white;
   
-  .add-new-schedule {
-    cursor: pointer;
+    margin: 25px 0;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 20vh;
+  }
+
+  footer h3 {
+    color: white;
+    font-size: 2em;
+
+    margin: 40px 0 0 0;
+  }
+
+  .social-media-links {
+    background-color: rgb(236, 233, 233);
+    width: 100%;
+    height: 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-media-links h4 {
+    font-size: 1.3em;
+  }
+
+  .social-media-links .icons {
+    margin-right: 10px;
   }
 }
